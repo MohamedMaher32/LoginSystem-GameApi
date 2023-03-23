@@ -1,0 +1,117 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/all.min.css">
+        <link rel="stylesheet" href="css/media.css">
+        <link rel="stylesheet" href="css/style.css">
+        <title>Game Over</title>
+    </head>
+    <body>
+        <!-- signup page -->
+        <div class="sginUpForm">
+            <div class="container text-center py-5 vh-100">
+                <div class="groub h-100 bg1">
+                    <div class="layer h-100 row justify-content-center align-items-center m-0">
+                      <div class="col-lg-5 col-sm-12">
+                        <img src="image/logo.png" alt="logo">
+                      </div>
+                      <div class="col-lg-7 col-sm-12 px-5">
+                        <h1 class="text-white py-3">Register To Play Game Over</h1>
+                        <input type="text" class="form-control bg-transparent my-3 text-white" placeholder="Enter your name" id="nameInput">
+                        <div class="alert alert-danger text-danger d-none" id="wrongName">You must enter minimum 3 letters for your name</div>
+                        <input type="email" class="form-control bg-transparent my-3 text-white" placeholder="Enter your email" id="emailInput">
+                        <div class="alert alert-danger text-danger d-none" id="wrongEmail">ex: a@gmail.com , a3@yaho.com</div>
+                        <input type="password" class="form-control bg-transparent my-3 text-white" placeholder="Enter your password" id="passwordInput">
+                        <div class="alert alert-danger text-danger d-none" id="wrongPass">You must enter minimum 3 numbers for your password</div>
+                        <div class="alert bg-transparent text-danger d-none" id="alertWrong">Email already exists</div>
+                        <div class="alert bg-transparent text-success d-none" id="alertSuccess">Success-Login now to play</div>
+                        <a class="btn btn-outline-info w-100 my-3" id="myBtn">Sign Up</a>
+                        <p class="text-white mt-2">You have an account ? <a id="Go" class="text-decoration-none text-white">Signin</a></p>
+                      </div>
+                   </div>
+                </div>
+            </div>
+        </div>
+        <!-- login page -->
+        <div class="loginForm d-none">
+            <div class="container text-center py-5 vh-100">
+                <div class="groub h-100 bg2">
+                    <div class="layer h-100 row justify-content-center align-items-center m-0">
+                      <div class="col-lg-5 col-sm-12">
+                        <img src="image/logo.png" alt="logo">
+                      </div>
+                      <div class="col-lg-7 col-sm-12 px-5">
+                        <h1 class="text-white py-3">Login To Play Game Over</h1>
+                        <input type="email" class="form-control bg-transparent my-3 text-white" placeholder="Enter your email" id="loginEmail">
+                        <div class="alert alert-danger text-danger d-none" id="wrongLOginName">You must enter minimum 3 letters for your name</div>
+                        <input type="password" class="form-control bg-transparent my-3 text-white" placeholder="Enter your password" id="loginPassword">
+                        <div class="alert alert-danger text-danger d-none" id="wrongLoginPass">You must enter minimum 3 numbers for your password</div>
+                        <div class="alert bg-transparent text-danger d-none" id="loginWrong">Incorrect email or password</div>
+                        <a class="btn btn-outline-info w-100 my-3" id="myBtn2">Login</a>
+                        <p class="text-white mt-2">Don’t have an account ? <a id="Back" class="text-decoration-none text-white">Signup</a></p>
+                      </div>
+                   </div>
+                </div>
+            </div>
+        </div>
+        <!-- spinner page -->
+        <div class="loading d-none"><span class="loader"></span></div>
+        <!-- game page -->
+        <div class="games pb-5 d-none" id="myGames">
+            <header>
+                <img src="image/wraper.png" alt="logo" class="w-100">
+            </header>
+            <nav class="navbar navbar-expand-lg col-md-6 col-lg-9 position-sticky top-0 mb-5">
+                <div class="container">
+                <h2 class="navbar-brand text-uppercase mb-0"><img src="image/logo-sm.png" alt="logo"> Game Reviews </h2>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="fa-solid fa-bars text-white fs-3 "></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#" catogry="mmorpg">mmorpg</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" catogry="shooter">shooter</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" catogry="sailing">sailing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" catogry="permadeath">permadeath</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" catogry="superhero">superhero</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" catogry="pixel">pixel</a>
+                    </li>
+                    </ul>
+                </div>
+                <a class="btn btn-outline-info text-white" id="logout">Logout</a>
+                </div>
+            </nav>
+            <div>
+            <div class="container">
+                <div class="row g-4" id="myRow"></div>
+            </div>
+            </div>
+        </div>
+        <!-- deatils page -->
+        <div class="details d-none" id="myInfo">
+        <div class="container">
+            <div class="row justify-content-between py-4">
+            <h3 class="col-6">Details Game</h3>
+            <i class="fa-solid fa-xmark text-center fs-4 text-muted align-self-center" id="closePage"></i>
+            </div>
+            <div class="row" id="myDeatils"></div>
+        </div>
+        </div>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/jquery-3.6.3.min.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
